@@ -50,16 +50,13 @@ def capture_and_compare(base_win, idx, data_dir):
     time.sleep(.04)
     pg.click()
     time.sleep(.04)
-    # if idx == 1:
-    #     pg.hotkey('ctrl', 'r')
-    #     time.sleep(.2)
+
     pg.scroll(-737)
     time.sleep(.04) 
     after = pg.screenshot().crop((0, 100, 2400, 800))
     return before == after  # 두 스크린샷 비교
 
 def screen_capture_loop(post_dir, post_id):
-    # 변화가 없을 때까지 스크롤
     options = Options()
     driver = webdriver.Chrome()
     driver.get(f"https://blog.naver.com/ddunidubab/{post_id}")

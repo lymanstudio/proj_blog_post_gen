@@ -181,12 +181,12 @@ def generate(img_idx, cur_post_dir, script, prv_result_dict = None):
 
     return result_dict
 
-# parser = argparse.ArgumentParser()
-# parser.add_argument('--post_id', required=True, help='포스트 ID 입력')
-# args = parser.parse_args()
+parser = argparse.ArgumentParser()
+parser.add_argument('--post_id', required=True, help='포스트 ID 입력')
+args = parser.parse_args()
 
-# post_id = args.post_id 
-post_id = 223447304536 #223439599137
+post_id = args.post_id 
+# post_id = 223447304536 #223439599137
 cur_post_dir = get_post_dir(post_id)
 
 result_dict = None
